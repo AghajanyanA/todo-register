@@ -1,3 +1,5 @@
+$primary-text-color: navajowhite;
+
 .App {
   text-align: center;
   background-color: #1A2137;
@@ -15,7 +17,7 @@
   font-weight: bold;
 }
 
-.successfulReg {
+.successfulReg{
   color: #63d911;
   font-weight: bold;
 }
@@ -27,11 +29,11 @@ button {
 }
 
 .loginWrapper {
-  color: navajowhite;
+  color: $primary-text-color
 }
 
 .registerWrapper {
-  color: navajowhite;
+  color: $primary-text-color
 }
 
 .todoList {
@@ -46,19 +48,15 @@ button {
   color: white;
   text-align: center;
 }
-
 .headerImg {
   max-width: 60vw;
 }
-
 .headerImg::after {
-  content: "";
+  content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgb(0, 19, 159), rgb(30, 42, 108));
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, rgb(0, 19, 159), rgb(30, 42, 108));;
 }
 
 .inputField {
@@ -73,6 +71,7 @@ button {
   font-weight: bold;
 }
 
+
 .myButton {
   background-color: blue;
   border: none;
@@ -81,9 +80,6 @@ button {
   padding: 5px 10px;
   margin: 10px;
 }
-
 .myButton:hover {
   cursor: pointer;
 }
-
-/*# sourceMappingURL=App.css.map */

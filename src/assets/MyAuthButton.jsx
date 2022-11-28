@@ -1,0 +1,1 @@
+export const MyAuthButton = ({type = null, value = null, onClick = null}) => <input className='myButton' type={type} value={value} onClick={onClick} />

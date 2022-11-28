@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css'
+import React, {useState} from "react";
+import {ReactRouter} from "./routes/reactRouter";
+import {Header} from "./Components/Header/Header";
 
+export const LoggedContext = React.createContext(false)
 function App() {
+
+    const [loggedStatus, setLoggedStatus] = useState({
+        loggedIn: false,
+        loggedEmail: ''
+    })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <LoggedContext.Provider value={{ loggedStatus, setLoggedStatus }}>
+            <Header />
+            <ReactRouter />
+        </LoggedContext.Provider>
     </div>
   );
 }

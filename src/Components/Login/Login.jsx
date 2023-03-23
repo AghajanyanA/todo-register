@@ -1,7 +1,7 @@
 import React, {useState, useContext} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import {LoggedContext} from "../../App";
-import {Input, message} from "antd";
+import {Input} from "antd";
 import {MyAuthButton} from "../../assets/MyAuthButton";
 
 export const Login = () => {
